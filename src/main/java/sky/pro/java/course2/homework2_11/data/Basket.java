@@ -1,11 +1,11 @@
 package sky.pro.java.course2.homework2_11.data;
 
-import org.springframework.web.context.annotation.SessionScope;
+import org.springframework.context.annotation.Scope;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@SessionScope
+@Scope(scopeName = "session")
 public class Basket {
     private List<Integer> basket = new ArrayList<>();
 

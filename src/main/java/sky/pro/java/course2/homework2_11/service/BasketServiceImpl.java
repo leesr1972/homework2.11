@@ -1,5 +1,6 @@
 package sky.pro.java.course2.homework2_11.service;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import sky.pro.java.course2.homework2_11.data.Basket;
 
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Scope(scopeName = "session")
 public class BasketServiceImpl implements BasketService {
     private Basket basket = new Basket();
 

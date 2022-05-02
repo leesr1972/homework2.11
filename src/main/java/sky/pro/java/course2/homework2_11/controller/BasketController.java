@@ -1,13 +1,14 @@
 package sky.pro.java.course2.homework2_11.controller;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import sky.pro.java.course2.homework2_11.data.Basket;
 import sky.pro.java.course2.homework2_11.service.BasketService;
 
 @RestController
+@Scope(scopeName = "session")
 @RequestMapping("/order")
 public class BasketController {
     private final BasketService basketService;
